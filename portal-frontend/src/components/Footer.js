@@ -10,14 +10,12 @@ function Footer() {
             Company<span>logo</span>
           </h3>
           <p className='footer-links'>
-            <a href='#' className='link-1'>
-              Home
-            </a>
-            <a href='#'>Blog</a>
-            <a href='#'>Pricing</a>
-            <a href='#'>About</a>
-            <a href='#'>Faq</a>
-            <a href='#'>Contact</a>
+            <a href='#' className='link-1'>Dashboard</a>
+            <a href='#'>Reports</a>
+            <a href='#'>Call Logs</a>
+            <a href='#'>Sales Data</a>
+            <a href='#'>Profile</a>
+            <a href='#'>Help/Support</a>
           </p>
           <p className='footer-company-name'>Company Name © 2015</p>
         </div>
