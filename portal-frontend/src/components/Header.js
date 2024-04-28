@@ -24,22 +24,22 @@ const Header = () => {
         </div>
         <ul className={`menu-items ${isMenuOpen ? 'open' : ''}`}>
           <li>
-            <a href='#'>Home</a>
+            <a href='#'>Dashboard</a>
           </li>
           <li>
-            <a href='#'>About</a>
+            <a href='#'>Reports</a>
           </li>
           <li>
-            <a href='#'>Category</a>
+            <a href='#'>Call Logs</a>
           </li>
           <li>
-            <a href='#'>Menu</a>
+            <a href='#'>Sales Data</a>
           </li>
           <li>
-            <a href='#'>Testimonial</a>
+            <a href='#'>Profile</a>
           </li>
           <li>
-            <a href='#'>Contact</a>
+            <a href='#'>Help/Support</a>
           </li>
         </ul>
         <h1 className='logo'>Navbar</h1>
