@@ -1,7 +1,7 @@
 function Heading() {
   return (
     <div>
-      <h1>VentIQ</h1>
+      <h1>Vend - IQ</h1>
     </div>
   );
 }
