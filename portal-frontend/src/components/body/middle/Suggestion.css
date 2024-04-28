@@ -1,0 +1,69 @@
+/* Suggestion.css */
+
+/* Style for Click Here button */
+.Click-here {
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  width: 120px;
+  margin: 20px auto;
+}
+
+/* Style for custom modal */
+.custom-model-main {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  z-index: 1000;
+}
+
+/* Style for inner modal container */
+.custom-model-inner {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for close button */
+.close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #888;
+}
+
+/* Style for content wrap */
+.custom-model-wrap {
+  margin-top: 20px;
+}
+
+/* Style for background overlay */
+.bg-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Style for overlay with higher z-index to capture click events */
+.overlay-click-capture {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 998;
+}

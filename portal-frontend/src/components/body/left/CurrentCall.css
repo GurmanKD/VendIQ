@@ -1,0 +1,77 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+.info {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.phone {
+  background-color: #dedede;
+  width: 411px;
+}
+
+.info i {
+  font-size: 5rem;
+}
+
+p {
+  margin-top: 0.8rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+.options {
+  margin-top: 2rem;
+  width: 100%;
+  height: 10rem;
+}
+
+.options i {
+  margin: 2rem 2rem 0;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.options span {
+  font-weight: 100;
+  padding: 0 3.13rem;
+}
+
+.options .text1 {
+  display: flex;
+}
+
+.cut {
+  display: flex;
+  justify-content: center;
+
+  height: 15vh;
+}
+
+.decline {
+  display: flex;
+  justify-content: center;
+
+  height: 50px;
+  width: 50px;
+  background: red;
+  border-radius: 50%;
+}
+
+.decline i {
+  transform: rotate(225deg);
+}
+
+.homescreen {
+  display: flex;
+  align-items: center;
+}
