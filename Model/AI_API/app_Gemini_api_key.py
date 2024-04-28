@@ -3,10 +3,8 @@ import google.generativeai as genai
 
 app = Flask(__name__)
 
-# Configure GenerativeAI API key
 genai.configure(api_key="AIzaSyDOvfJpTBN-tRuqRxOqknxlKrAMVPWHes4")
 
-# Create GenerativeModel instance
 generation_config = {
     "temperature": 0,
     "top_p": 1,
