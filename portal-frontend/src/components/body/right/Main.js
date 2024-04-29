@@ -4,13 +4,14 @@ import DayEndSummary from './DayEndSummary';
 import SentimentSummary from './SentimentSummary';
 import AudioGraph from './PitchGraph';
 
-function Right() {
+function Right(props) {
+  const { recieveData } = props;
   return (
-    <div className='right-content' style={{ marginTop: '80px' }}>
-      <AudioGraph />
-      <SentimentAnalysisGraph />
-      <SentimentSummary />
-      <DayEndSummary />
+    <div className='right-content' style={{ marginTop: '60px' }}>
+      <AudioGraph/>
+      <SentimentAnalysisGraph recieveData={recieveData}/>
+      <SentimentSummary recieveData={recieveData}/>
+      {/* <DayEndSummary /> */}
     </div>
   );
 }
