@@ -1,4 +1,4 @@
-.window-container {
+/* .window-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
     transform: scale(-19%);
     opacity: 0;
   } */
-  .Window {
+/*.Window {
     display: flex;
     border: 20px solid rgb(255, 255, 255);
     flex-flow: row wrap;
@@ -90,4 +90,4 @@
       border: 5px solid rgb(0, 0, 0);
     }
   }
-  
+   */

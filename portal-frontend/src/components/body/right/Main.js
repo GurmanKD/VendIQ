@@ -1,18 +1,16 @@
-import Heading from './Heading';
 import SentimentAnalysisGraph from './SentimentAnalysisGraph';
-import History from './History';
 import './Main.css';
 import DayEndSummary from './DayEndSummary';
+import SentimentSummary from './SentimentSummary';
 import AudioGraph from './PitchGraph';
 
 function Right() {
   return (
-    <div className='right-content'>
-      <Heading />
-      {/* <SentimentAnalysisGraph /> */}
-      {/* <DayEndSummary />
-      <History /> */}
+    <div className='right-content' style={{ marginTop: '80px' }}>
       <AudioGraph />
+      <SentimentAnalysisGraph />
+      <SentimentSummary />
+      <DayEndSummary />
     </div>
   );
 }

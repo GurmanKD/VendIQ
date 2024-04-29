@@ -39,7 +39,7 @@ const options = {
     curve: 'smooth',
   },
   title: {
-    text: 'Dynamic Updating Chart',
+    text: 'Sentiment Analysis',
     align: 'left',
   },
   markers: {
