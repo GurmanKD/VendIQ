@@ -16,7 +16,7 @@ const Dictaphone = () => {
   useEffect(() => {
     if (browserSupportsSpeechRecognition) {
       // startListening();
-      SpeechRecognition.startListening({ continuous: true });
+      SpeechRecognition.startListening({ continuous: true , language: 'en-IN'});
     }
   }, [browserSupportsSpeechRecognition]);
 
@@ -27,8 +27,6 @@ const Dictaphone = () => {
   return (
     <div>
       <p>Microphone: {listening ? 'on' : 'off'}</p>
-
-      <button onClick={resetTranscript}>Reset</button>
       <p className='transcript'>{transcript}</p>
     </div>
   );
