@@ -1,7 +1,9 @@
+import './Heading.css';
+
 function Heading() {
   return (
     <div>
-      <h1>VendIQ</h1>
+      <h1 className='midHead'>VendIQ</h1>
     </div>
   );
 }
