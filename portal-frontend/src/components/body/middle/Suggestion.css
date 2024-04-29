@@ -1,4 +1,4 @@
-.suggestions-container{
+.suggestions-container {
   width: 100%;
   height: 80vh;
   margin-left: 10px;
@@ -8,14 +8,14 @@
   padding: 5px;
   padding-top: 10px;
 }
-.suggestions-container h2{
+.suggestions-container h2 {
   color: #153448;
   font-size: 2.5rem;
   margin: 0;
   padding: 0;
   margin-left: 10px;
 }
-.suggestions-container .suggestions{
+.suggestions-container .suggestions {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;

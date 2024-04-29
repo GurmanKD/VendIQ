@@ -1,5 +1,4 @@
 import Heading from './Heading';
-import ChatInterpretation from '../left/ChatInterpretation';
 import Suggestion from './Suggestion';
 
 function Middle(props) {

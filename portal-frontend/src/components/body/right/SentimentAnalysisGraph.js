@@ -102,7 +102,9 @@ const SentimentAnalysisGraph = (props) => {
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
 
-  return <div id='chart' style={{ background: '#3c5b6f' }}></div>;
+  return (
+    <div id='chart' style={{ background: '#3c5b6f', padding: '10px' }}></div>
+  );
 };
 
 export default SentimentAnalysisGraph;

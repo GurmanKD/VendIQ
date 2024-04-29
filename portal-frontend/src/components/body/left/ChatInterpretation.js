@@ -4,8 +4,8 @@ function ChatInterpretation(props) {
   const { updateSharedData } = props;
   return (
     <div className='boxed'>
-      <Dictaphone updateSharedData={updateSharedData}/>
-      </div>
+      <Dictaphone updateSharedData={updateSharedData} />
+    </div>
   );
 }
 
