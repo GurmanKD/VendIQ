@@ -1,11 +1,12 @@
 import Heading from './Heading';
 import Suggestion from './Suggestion';
 
-function Middle() {
+function Middle(props) {
+  console.log(props);
+  const { recieveData } = props;
   return (
     <div style={{ marginTop: '80px' }}>
-      <Heading />
-      <Suggestion />
+      <Suggestion recieveData={recieveData} />
     </div>
   );
 }

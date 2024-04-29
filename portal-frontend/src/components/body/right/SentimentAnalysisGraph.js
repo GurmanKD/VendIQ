@@ -16,7 +16,7 @@ const options = {
   ],
   chart: {
     id: 'realtime',
-    height: 350,
+    height: 250,
     type: 'line',
     animations: {
       enabled: true,
@@ -78,7 +78,8 @@ const options = {
   },
 };
 
-const SentimentAnalysisGraph = () => {
+const SentimentAnalysisGraph = (props) => {
+  const { recieveData } = props;
   useEffect(() => {
     const chart = new ApexCharts(document.querySelector('#chart'), options);
     chart.render();

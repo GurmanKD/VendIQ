@@ -4,16 +4,14 @@ import DayEndSummary from './DayEndSummary';
 import SentimentSummary from './SentimentSummary';
 import AudioGraph from './PitchGraph';
 
-function Right() {
+function Right(props) {
+  const { recieveData } = props;
   return (
-    <div className='right-content' style={{ marginTop: '80px' }}>
+    <div className='right-content' style={{ marginTop: '60px' }}>
       <AudioGraph />
-      <div style={{ marginBottom: '25px' }} />{' '}
-      {/* Space between AudioGraph and SentimentAnalysisGraph */}
-      <SentimentAnalysisGraph />
-      <Spacediv /> {/* Custom Space */}
-      <SentimentSummary />
-      <DayEndSummary />
+      <SentimentAnalysisGraph recieveData={recieveData} />
+      <SentimentSummary recieveData={recieveData} />
+      {/* <DayEndSummary /> */}
     </div>
   );
 }
