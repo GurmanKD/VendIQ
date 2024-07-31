@@ -13,18 +13,20 @@ const CurrentCall = (props) => {
           </div>
         </div>
         <div className='options'>
-          <div className='1'>
-            <i className='fas fa-microphone-slash'></i>
-            <i className='fas fa-pause'></i>
-
-            <i className='fas fa-phone-alt decline'></i>
+          <div className='controls'>
+            <div className='control'>
+              <i className='fas fa-microphone-slash'></i>
+              <span>Mute</span>
+            </div>
+            <div className='control'>
+              <i className='fas fa-pause'></i>
+              <span>Hold</span>
+            </div>
+            <div className='control'>
+              <i className='fas fa-phone-alt decline'></i>
+              <span>Decline</span>
+            </div>
           </div>
-
-          <span>Mute</span>
-          <span>Hold</span>
-          <span style={{ paddingLeft: '1rem' }}>Decline</span>
-
-          <div className='text1'></div>
         </div>
       </div>
     </div>

@@ -11,17 +11,13 @@ const Header = () => {
   return (
     <nav className='navbar'>
       <div className='navbar-container container'>
-        <input
-          type='checkbox'
-          id='toggleMenu'
-          checked={isMenuOpen}
-          onChange={toggleMenu}
-        />
-        <div className='hamburger-lines' onClick={toggleMenu}>
-          <span className='line line1'></span>
-          <span className='line line2'></span>
-          <span className='line line3'></span>
-        </div>
+      
+          <h1 style={{
+            fontSize:"2.5rem"
+          }}>
+            VendIQ
+          </h1>
+        
         <ul className={`menu-items ${isMenuOpen ? 'open' : ''}`}>
           <li>
             <a href=''>Dashboard</a>
@@ -42,7 +38,7 @@ const Header = () => {
             <a href='#'>Help/Support</a>
           </li>
         </ul>
-        <h1 className='logo'>Navbar</h1>
+        
       </div>
     </nav>
   );

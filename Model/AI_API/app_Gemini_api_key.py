@@ -5,7 +5,7 @@ from flask_cors import CORS,cross_origin
 app = Flask(__name__)
 CORS(app,supports_credentials=True)
 
-genai.configure(api_key="AIzaSyDOvfJpTBN-tRuqRxOqknxlKrAMVPWHes4")
+genai.configure(api_key="AIzaSyDCe71q81HlmufrRIq_kQx4FicLuQ-6-OU")
 
 generation_config = {
     "temperature": 0,
@@ -46,11 +46,13 @@ def generate_content():
 
         # Generate content
         response = model.generate_content(prompt_parts)
-        
+        print(response.text)
         # Return generated content as JSON response
         return jsonify({'generated_content': response.text})
     except Exception as e:
+        print(e)
         return jsonify({'error': str(e)}), 500
+        
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port = 5001,debug=True)
