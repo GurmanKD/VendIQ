@@ -6,9 +6,11 @@ const CurrentCall = (props) => {
     <div className='phone'>
       <div className='callerid'>
         <div className='info'>
-          <i className='fab fa-google'></i>
-          <h1>{props.name}</h1>
-          <p>Mobile +91124698262</p>
+          <i className='fas fa-user-circle'></i>
+          <div>
+            <h2>Akarsh</h2>
+            <p>Mobile +91124698262</p>
+          </div>
         </div>
         <div className='options'>
           <div className='1'>

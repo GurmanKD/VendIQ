@@ -5,8 +5,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body,
-.info {
+body {
   display: flex;
 
   flex-direction: column;
@@ -15,10 +14,15 @@ body,
 .phone {
   background-color: #dedede;
   width: 411px;
+  padding: 10px;
 }
 
+.info {
+  display: flex;
+  justify-content: space-evenly;
+}
 .info i {
-  font-size: 5rem;
+  font-size: 3.5rem;
 }
 
 p {
@@ -30,15 +34,15 @@ h1 {
 }
 
 .options {
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 100%;
-  height: 10rem;
 }
 
 .options i {
   margin: 2rem 2rem 0;
+  margin-top: 0;
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 .options span {
@@ -60,14 +64,9 @@ h1 {
 .decline {
   display: flex;
   justify-content: center;
-
-  height: 50px;
-  width: 50px;
+  align-items: center;
   background: red;
   border-radius: 50%;
-}
-
-.decline i {
   transform: rotate(225deg);
 }
 
