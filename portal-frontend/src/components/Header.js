@@ -24,7 +24,7 @@ const Header = () => {
         </div>
         <ul className={`menu-items ${isMenuOpen ? 'open' : ''}`}>
           <li>
-            <a href='#'>Dashboard</a>
+            <a href=''>Dashboard</a>
           </li>
           <li>
             <a href='#'>Reports</a>
