@@ -37,21 +37,41 @@ const options = {
   },
   stroke: {
     curve: 'smooth',
+    colors: ['#948979'],
   },
   title: {
-    text: 'Dynamic Updating Chart',
-    align: 'left',
+    text: 'Sentiment Analysis',
+    align: 'centre',
+    style: {
+      color: '#DFD0B8', // Set title color
+    },
   },
   markers: {
     size: 0,
   },
   xaxis: {
     type: 'datetime',
+    labels: {
+      style: {
+        colors: '#DFD0B8', // Set X-axis label color
+      },
+    },
+    axisBorder: {
+      color: '#DFD0B8', // Set X-axis color
+    },
     // Define your X axis range here
     // range: XAXISRANGE,
   },
   yaxis: {
     max: 100,
+    labels: {
+      style: {
+        colors: '#DFD0B8', // Set Y-axis label color
+      },
+    },
+    axisBorder: {
+      color: '#DFD0B8', // Set Y-axis color
+    },
   },
   legend: {
     show: false,
@@ -81,7 +101,7 @@ const SentimentAnalysisGraph = () => {
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
 
-  return <div id='chart'></div>;
+  return <div id='chart' style={{ background: '#3c5b6f' }}></div>;
 };
 
 export default SentimentAnalysisGraph;

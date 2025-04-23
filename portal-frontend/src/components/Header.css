@@ -15,7 +15,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.9);
+  background: #3c5b6f;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 100;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -57,10 +57,11 @@ html {
   font-family: 'Arial', sans-serif;
   font-weight: 500;
   transition: color 0.3s ease;
+  color: #dfd0b8;
 }
 
 .menu-items a:hover {
-  color: #117964;
+  color: #948979;
   transform: translateY(-2px);
 }
 

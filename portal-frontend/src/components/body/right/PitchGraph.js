@@ -70,7 +70,7 @@ const MicrophoneGraph = () => {
             label: 'Microphone Input',
             data: smoothedData,
             fill: false,
-            borderColor: 'rgb(75, 192, 192)',
+            borderColor: '#948979', // Line color set to #948979
             tension: 0.1,
           },
         ],
@@ -93,12 +93,20 @@ const MicrophoneGraph = () => {
                   title: {
                     display: true,
                     text: 'Time (s)',
+                    color: '#DFD0B8', // X-axis label color
+                  },
+                  ticks: {
+                    color: '#DFD0B8', // X-axis tick color
                   },
                 },
                 y: {
                   title: {
                     display: true,
                     text: 'Amplitude',
+                    color: '#DFD0B8', // Y-axis label color
+                  },
+                  ticks: {
+                    color: '#DFD0B8', // Y-axis tick color
                   },
                 },
               },
@@ -127,8 +135,8 @@ const MicrophoneGraph = () => {
   };
 
   return (
-    <div>
-      <h2>Microphone Input Graph</h2>
+    <div style={{ backgroundColor: '#3c5b6f' }}>
+      <h2 style={{ color: '#DFD0B8' }}>Microphone Input Graph</h2>
       <canvas ref={chartRef}></canvas>
     </div>
   );
