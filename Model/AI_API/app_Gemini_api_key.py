@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
 import google.generativeai as genai
+from flask_cors import CORS,cross_origin
 
 app = Flask(__name__)
+CORS(app,supports_credentials=True)
 
 genai.configure(api_key="AIzaSyDOvfJpTBN-tRuqRxOqknxlKrAMVPWHes4")
 
@@ -36,6 +38,7 @@ model = genai.GenerativeModel(model_name="gemini-pro",
                               safety_settings=safety_settings)
 
 @app.route('/generate', methods=['POST'])
+@cross_origin(supports_credentials=True)
 def generate_content():
     try:
         # Extract prompts from request
@@ -50,4 +53,4 @@ def generate_content():
         return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0',port = 5001,debug=True)
