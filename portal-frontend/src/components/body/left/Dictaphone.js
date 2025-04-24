@@ -32,11 +32,15 @@ useEffect(() => {
     console.log("listening");
    }
    else{
-    if(!fullTranscript.length||!transcript.length){
-      SpeechRecognition.startListening({ continuous: false ,interimResults:true, language: 'en-IN'});
-      return;
-    }
+    // if(!fullTranscript.length||!transcript.length){
+    //   SpeechRecognition.startListening({ continuous: false ,interimResults:true, language: 'en-IN'});
+    //   return;
+    // }
+    console.log(transcript);
     setFullTranscript(prevTranscript => prevTranscript + ' ' + transcript);
+    if(fullTranscript.length&&transcript.length){
+      
+      
     const sentences = fullTranscript.split('.').map(sentence => sentence.trim()).filter(Boolean);
     const dataToSend = {
       headlines: sentences.map(sentence => ({ headline: sentence }))
@@ -46,11 +50,11 @@ useEffect(() => {
           "Following is in the context of Tecommunication call for AWS.All the following sentences are said by customer, Summarize important points for the call representative also suggest any relevant products you can find along with price. Treat the Last Prompt as most important since it might be the answer to customers question"
       ]
   }
-  if(geminiData.prompts.length<=count){
-    SpeechRecognition.startListening({ continuous: false ,interimResults:true, language: 'en-IN'});
-    return;
-  }
-  setCount(count+1);
+  // if(geminiData.prompts.length<=count){
+  //   SpeechRecognition.startListening({ continuous: false ,interimResults:true, language: 'en-IN'});
+  //   return;
+  // }
+  // setCount(count+1);
     sentences.forEach(sentence => {
       geminiData.prompts.push(sentence);
     })
@@ -74,7 +78,7 @@ useEffect(() => {
       .catch(error => {
         console.error('Error making POST request:', error);
       });
-
+    }
   
 
     resetTranscript(); 

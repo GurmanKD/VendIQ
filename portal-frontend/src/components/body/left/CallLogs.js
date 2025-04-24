@@ -52,8 +52,8 @@ function CallLogs() {
 
   return (
     <div className='content'>
-      <h2 className='contactList'>Contact List</h2>
-      <ContactList contacts={contacts} />
+      <h2 className='contactList insideContent'>Contact List</h2>
+      <ContactList className='insideContent' contacts={contacts} />
       <BottomBar />
     </div>
   );

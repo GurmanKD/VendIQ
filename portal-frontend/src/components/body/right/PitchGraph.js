@@ -139,8 +139,10 @@ const timeLabels = Array.from(Array(smoothedData.length).keys()).map(
 
   return (
     <div style={{ backgroundColor: '#3c5b6f' }}>
-      <h2 style={{ color: '#DFD0B8' }}>Microphone Input Graph</h2>
-      <canvas ref={chartRef}></canvas>
+      <h2 style={{ color: '#DFD0B8', marginTop: '10px' }}>
+        Microphone Input Graph
+      </h2>
+      <canvas ref={chartRef} style={{ marginBottom: '25px' }}></canvas>
     </div>
   );
 };
