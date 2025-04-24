@@ -1,5 +1,6 @@
 import './SentimentSummary';
-function SentimentSummary() {
-  return <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 😃</p>;
+function SentimentSummary(props) {
+  const { recieveData } = props;
+  return <p>Sarcasam = {JSON.stringify(recieveData)}</p>;
 }
 export default SentimentSummary;

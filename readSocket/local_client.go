@@ -34,7 +34,7 @@ func main() {
 		switch message {
 		case "Connected":
 			// fmt.Printf("[%s] Status: Connected\n", time.Now().Format(time.Stamp))
-			if err := openChrome("http://127.0.0.1:5500/temp%20frontend/"); err != nil {
+			if err := openChrome("http://localhost:3000/"); err != nil {
 				log.Println("failed to open Chrome:", err)
 			}
 			stop := make(chan struct{})

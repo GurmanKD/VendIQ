@@ -1,51 +1,40 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Suggestion.css'; // Import the CSS file for styles
 
-const Suggestions = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Suggestions = (props) => {
+  const { recieveData  } = props;
 
-  const toggleModal = () => {
-    setIsOpen(!isOpen);
-  };
+  if (!recieveData  || !recieveData .generated_content) {
+    return null; // Handle the case where data is undefined
+  }
 
-  const handleCloseModal = () => {
-    setIsOpen(false);
-  };
+  // Regular expressions to match the title and points
+  const titleRegex = /\*\*(.*?)\*\*/g;
+  const pointsRegex = /\* (.*?)\n/g;
+
+  // Match the title and points
+  let match;
+  let titles = [];
+  let points = [];
+  while ((match = titleRegex.exec(recieveData .generated_content)) !== null) {
+    titles.push(match[1]);
+  }
+  while ((match = pointsRegex.exec(recieveData .generated_content)) !== null) {
+    points.push(match[1]);
+  }
 
   return (
     <div className='suggestions-container'>
-      {/* Button for suggestion */}
-      <div className='Click-here' onClick={toggleModal}>
-        Suggestions
-      </div>
-
-      {/* Modal */}
-      {isOpen && (
-        <div>
-          <div className='custom-model-main model-open'>
-            <div className='custom-model-inner'>
-              <div className='close-btn' onClick={toggleModal}>
-                ×
-              </div>
-              <div className='custom-model-wrap'>
-                <div className='pop-up-content-wrap'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-                  neque, quod quia commodi accusantium reprehenderit voluptate
-                  non dicta earum, nisi delectus suscipit enim amet. Aliquid
-                  aspernatur eum vero in ratione.
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Background overlay */}
-          <div className='bg-overlay' onClick={toggleModal}></div>
-          {/* Overlay with higher z-index to capture click events */}
-          <div
-            className='overlay-click-capture'
-            onClick={handleCloseModal}
-          ></div>
+      {titles.map((title, index) => (
+        <div key={index}>
+          <h3>{title}</h3>
+          <ul>
+            {points.map((point, index) => (
+              <li key={index}>{point}</li>
+            ))}
+          </ul>
         </div>
-      )}
+      ))}
     </div>
   );
 };

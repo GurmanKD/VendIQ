@@ -59,9 +59,12 @@ const MicrophoneGraph = () => {
   useEffect(() => {
     if (audioData.length > 0 && chartRef.current) {
       const smoothedData = smoothAudioData(audioData); // Apply simple moving average filter
-      const timeLabels = Array.from(Array(smoothedData.length).keys()).map(
-        (i) => i * 0.2 // Adjust the interval as needed
-      ); // Time labels (0.1 second intervals)
+      // Inside the useEffect where you update the chart data
+
+const timeLabels = Array.from(Array(smoothedData.length).keys()).map(
+  (i) => (i * 0.2).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) // Adjust the interval as needed
+);
+
 
       const chartData = {
         labels: timeLabels,

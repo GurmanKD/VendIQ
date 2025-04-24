@@ -1,9 +1,10 @@
 import Dictaphone from './Dictaphone';
-
-function ChatInterpretation() {
+import './interpret.css';
+function ChatInterpretation(props) {
+  const { updateSharedData } = props;
   return (
-    <div>
-      <Dictaphone />
+    <div className='boxed'>
+      <Dictaphone updateSharedData={updateSharedData}/>
       </div>
   );
 }

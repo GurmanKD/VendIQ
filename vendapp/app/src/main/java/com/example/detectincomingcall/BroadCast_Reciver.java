@@ -25,7 +25,7 @@ import android.widget.Toast;
 public class BroadCast_Reciver extends BroadcastReceiver {
     private static final String CHANNEL_ID = "IncomingCallChannel";
     private static final int NOTIFICATION_ID = 123;
-    private String ipAddress="10.21.81.48";
+    private String ipAddress="akarsh.smartsavaari.in";
     @Override
     public void onReceive(Context context, Intent intent) {
         String state = intent.getStringExtra(TelephonyManager.EXTRA_STATE);
@@ -85,7 +85,7 @@ public class BroadCast_Reciver extends BroadcastReceiver {
                     DataOutputStream os;
                     try {
                         Log.d("Test Call", ipAddress);
-                        HttpURLConnection conn = (HttpURLConnection) new URL("http://" + ipAddress + "/update-message").openConnection();
+                        HttpURLConnection conn = (HttpURLConnection) new URL("https://" + ipAddress + "/update-message").openConnection();
                         conn.setRequestMethod("POST");
                         conn.setRequestProperty("Content-Type", "application/json");
                         conn.setDoOutput(true);
