@@ -63,8 +63,10 @@ import string
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
-
+from flask_cors import cross_origin,CORS
 app = Flask(__name__)
+
+CORS(app,supports_credentials=True)
 
 def sentiment_analyse(sentiment_text):
     analyzer = SentimentIntensityAnalyzer()
@@ -93,6 +95,7 @@ def sarcasm_detection(input_text):
     return sarcasm_result
 
 @app.route('/analyze', methods=['POST'])
+@cross_origin(supports_credentials=True)
 def analyze_text():
     json_data = request.get_json()  # Fetch JSON data from the request body
     results = []
