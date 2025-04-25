@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
+import './PitchGraph.css'; // Import the CSS file
 
 const MicrophoneGraph = () => {
   const [audioData, setAudioData] = useState([]);
@@ -61,10 +62,13 @@ const MicrophoneGraph = () => {
       const smoothedData = smoothAudioData(audioData); // Apply simple moving average filter
       // Inside the useEffect where you update the chart data
 
-const timeLabels = Array.from(Array(smoothedData.length).keys()).map(
-  (i) => (i * 0.2).toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) // Adjust the interval as needed
-);
-
+      const timeLabels = Array.from(Array(smoothedData.length).keys()).map(
+        (i) =>
+          (i * 0.2).toLocaleString(undefined, {
+            minimumFractionDigits: 1,
+            maximumFractionDigits: 1,
+          }) // Adjust the interval as needed
+      );
 
       const chartData = {
         labels: timeLabels,
@@ -73,7 +77,7 @@ const timeLabels = Array.from(Array(smoothedData.length).keys()).map(
             label: 'Microphone Input',
             data: smoothedData,
             fill: false,
-            borderColor: '#948979', // Line color set to #948979
+            borderColor: '#ff6700',
             tension: 0.1,
           },
         ],
@@ -96,20 +100,20 @@ const timeLabels = Array.from(Array(smoothedData.length).keys()).map(
                   title: {
                     display: true,
                     text: 'Time (s)',
-                    color: '#DFD0B8', // X-axis label color
+                    color: '#000', // X-axis label color
                   },
                   ticks: {
-                    color: '#DFD0B8', // X-axis tick color
+                    color: '#000', // X-axis tick color
                   },
                 },
                 y: {
                   title: {
                     display: true,
                     text: 'Amplitude',
-                    color: '#DFD0B8', // Y-axis label color
+                    color: '#000', // Y-axis label color
                   },
                   ticks: {
-                    color: '#DFD0B8', // Y-axis tick color
+                    color: '#000', // Y-axis tick color
                   },
                 },
               },
@@ -138,8 +142,8 @@ const timeLabels = Array.from(Array(smoothedData.length).keys()).map(
   };
 
   return (
-    <div style={{ backgroundColor: '#3c5b6f' }}>
-      <h2 style={{ color: '#DFD0B8', marginTop: '10px' }}>
+    <div style={{ backgroundColor: '#FFF' }}>
+      <h2 style={{ color: '#000', marginTop: '10px' }}>
         Microphone Input Graph
       </h2>
       <canvas ref={chartRef} style={{ marginBottom: '25px' }}></canvas>

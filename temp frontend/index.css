@@ -5,14 +5,14 @@ html, body{
     background: linear-gradient(to right, hsl(319, 100%, 67%), #4666f3);
   }
   
-  
+
   .wrapper{
     width: 100%;
     
     margin: 0 auto;
     padding: 0;
   }
-  
+
   .nav-bar-area{
     width: 100%;
     height: 60px;

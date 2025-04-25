@@ -37,13 +37,13 @@ const options = {
   },
   stroke: {
     curve: 'smooth',
-    colors: ['#948979'],
+    colors: ['#ff6700'],
   },
   title: {
     text: 'Sentiment Analysis',
     align: 'centre',
     style: {
-      color: '#DFD0B8', // Set title color
+      color: '#000', // Set title color
     },
   },
   markers: {
@@ -53,11 +53,11 @@ const options = {
     type: 'datetime',
     labels: {
       style: {
-        colors: '#DFD0B8', // Set X-axis label color
+        colors: '#000', // Set X-axis label color
       },
     },
     axisBorder: {
-      color: '#DFD0B8', // Set X-axis color
+      color: '#000', // Set X-axis color
     },
     // Define your X axis range here
     // range: XAXISRANGE,
@@ -66,11 +66,11 @@ const options = {
     max: 100,
     labels: {
       style: {
-        colors: '#DFD0B8', // Set Y-axis label color
+        colors: '#000', // Set Y-axis label color
       },
     },
     axisBorder: {
-      color: '#DFD0B8', // Set Y-axis color
+      color: '#000', // Set Y-axis color
     },
   },
   legend: {
@@ -102,9 +102,7 @@ const SentimentAnalysisGraph = (props) => {
     return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
 
-  return (
-    <div id='chart' style={{ background: '#3c5b6f', padding: '10px' }}></div>
-  );
+  return <div id='chart' style={{ background: '#FFF', padding: '10px' }}></div>;
 };
 
 export default SentimentAnalysisGraph;

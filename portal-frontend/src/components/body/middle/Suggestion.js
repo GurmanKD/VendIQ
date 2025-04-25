@@ -25,6 +25,11 @@ const Suggestions = (props) => {
 
   return (
     <div className='suggestions-container'>
+      <h1 style={{
+        marginBottom:"2rem",
+      }}>
+        AI Suggestions
+      </h1>
       {titles.map((title, index) => (
         <div key={index}>
           <h3>{title}</h3>

@@ -15,7 +15,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  background: #3c5b6f;
+  background: #ffd7b5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 100;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -33,7 +33,7 @@ html {
 
 .logo {
   font-size: 2.3rem;
-  color: #333;
+  color: black;
   font-family: 'Arial', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
@@ -52,16 +52,16 @@ html {
 
 .menu-items a {
   text-decoration: none;
-  color: #333;
+  color: black;
   font-size: 1.8rem;
   font-family: 'Arial', sans-serif;
   font-weight: 500;
   transition: color 0.3s ease;
-  color: #dfd0b8;
+
 }
 
 .menu-items a:hover {
-  color: #948979;
+  color: black;
   transform: translateY(-2px);
 }
 

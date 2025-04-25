@@ -6,6 +6,7 @@ function Middle(props) {
   const { recieveData } = props;
   return (
     <div style={{ marginTop: '80px' }}>
+      
       <Suggestion recieveData={recieveData} />
     </div>
   );
